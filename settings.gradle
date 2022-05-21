@@ -1,0 +1,4 @@
+rootProject.name = 'test-spring-boot-starter'
+include 'starter'
+include 'logstarter'
+

@@ -1,0 +1,44 @@
+plugins {
+    id 'java'
+}
+
+group 'com.gmail.arthurstrokov'
+version '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+ext{
+    springVersion = '5.3.20'
+    aspectjVersion = '1.9.9.1'
+}
+
+
+dependencies {
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor:2.6.7'
+    // https://mvnrepository.com/artifact/org.springframework/spring-core
+    implementation group: 'org.springframework', name: 'spring-core', version: springVersion
+    // https://mvnrepository.com/artifact/org.springframework/spring-context
+    implementation group: 'org.springframework', name: 'spring-context', version: springVersion
+
+    // https://mvnrepository.com/artifact/org.aspectj/aspectjtools
+    implementation group: 'org.aspectj', name: 'aspectjtools', version: aspectjVersion
+    // https://mvnrepository.com/artifact/org.aspectj/aspectjweaver
+    runtimeOnly group: 'org.aspectj', name: 'aspectjweaver', version: aspectjVersion
+    // https://mvnrepository.com/artifact/org.aspectj/aspectjrt
+    runtimeOnly group: 'org.aspectj', name: 'aspectjrt', version: aspectjVersion
+
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-autoconfigure
+    implementation 'org.springframework.boot:spring-boot-autoconfigure:2.7.0'
+
+    // https://mvnrepository.com/artifact/org.slf4j/slf4j-api
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.36'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+}
+
+test {
+    useJUnitPlatform()
+}

@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.gmail.arthurstrokov.service.StarterConfiguration, \
+  com.gmail.arthurstrokov.service.helloservice.autoconfigure.HelloServiceAutoConfiguration
